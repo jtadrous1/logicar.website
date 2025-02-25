@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/logicar.website/static/css/main.b86f47a5.css",
+    "main.js": "/logicar.website/static/js/main.7145a57f.js",
+    "static/js/453.2ed093dd.chunk.js": "/logicar.website/static/js/453.2ed093dd.chunk.js",
+    "index.html": "/logicar.website/index.html",
+    "main.b86f47a5.css.map": "/logicar.website/static/css/main.b86f47a5.css.map",
+    "main.7145a57f.js.map": "/logicar.website/static/js/main.7145a57f.js.map",
+    "453.2ed093dd.chunk.js.map": "/logicar.website/static/js/453.2ed093dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b86f47a5.css",
+    "static/js/main.7145a57f.js"
+  ]
+}
