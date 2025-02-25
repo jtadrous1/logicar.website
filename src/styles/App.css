@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #6f9283;
+  --secondary-color: #4a7265;
+  --text-color: #e0e0e0;
+  --dark-bg: #121212;
+  --dark-card: #1e1e1e;
+  --dark-lighter: #2d2d2d;
+  --white: #ffffff;
+  --border-radius: 16px;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.8s ease;
+  --glass-bg: rgba(30, 30, 30, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve text selection */
+::selection {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Add modern button styles */
+button, .button {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+/* Add container max-width breakpoints */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* Add modern heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--white) 0%, var(--text-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Add Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Add content-visibility for better rendering performance */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+} 
