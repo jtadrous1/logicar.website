@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
+  const scrollToSignup = () => {
+    const signupSection = document.getElementById('signup');
+    if (signupSection) {
+      signupSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -12,12 +19,9 @@ const Footer = () => {
             <p>Your smart car maintenance assistant</p>
             <p className="footer-tagline">Never miss a service again.</p>
             <div className="app-badges">
-              <a href="https://apps.apple.com/app/logicar" target="_blank" rel="noopener noreferrer" className="app-badge">
-                <i className="fab fa-apple"></i> App Store
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.logicar" target="_blank" rel="noopener noreferrer" className="app-badge">
-                <i className="fab fa-google-play"></i> Google Play
-              </a>
+              <button onClick={scrollToSignup} className="signup-link">
+                <i className="fas fa-bell"></i> Get Launch Updates
+              </button>
             </div>
           </div>
           
@@ -26,7 +30,7 @@ const Footer = () => {
             <Link to="/">Home</Link>
             <Link to="/features">Features</Link>
             <Link to="/pricing">Pricing</Link>
-            <a href="#download">Download</a>
+            <a href="#signup">Sign Up</a>
           </div>
           
           <div className="footer-section">

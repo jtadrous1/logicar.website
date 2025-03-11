@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   background: rgba(30, 30, 30, 0.8);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   z-index: 1000;
@@ -12,6 +13,7 @@
 
 .navbar.scrolled {
   background: rgba(30, 30, 30, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
@@ -89,17 +91,19 @@
   transform: scaleX(1);
 }
 
-.download-button {
+.signup-nav-button {
   padding: 12px 24px;
-  background: rgba(111, 146, 131, 0.2);
-  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
   color: var(--white);
+  border: none;
   border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.download-button:hover {
-  background: var(--primary-color);
+.signup-nav-button:hover {
+  background: var(--secondary-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(111, 146, 131, 0.3);
 }

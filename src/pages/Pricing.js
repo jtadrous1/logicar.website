@@ -2,42 +2,53 @@ import React, { useState } from 'react';
 import '../styles/Pricing.css';
 
 const Pricing = () => {
-  const [isYearly, setIsYearly] = useState(false);
+  const [isYearly, setIsYearly] = useState(true);
+
+  const scrollToSignup = () => {
+    // Find the signup section on the home page
+    const homePage = document.querySelector('.home');
+    if (homePage) {
+      // If we're on the home page, scroll to the signup section
+      const signupSection = document.getElementById('signup');
+      if (signupSection) {
+        signupSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're not on the home page, navigate to the home page with the signup section
+      window.location.href = '/#signup';
+    }
+  };
 
   return (
-    <section className="pricing-page">
-      <div className="container">
-        <h1>Simple Pricing</h1>
+    <div className="pricing-page">
+      <div className="pricing-header">
+        <h1>Simple, Transparent Pricing</h1>
+        <p>Choose the plan that works for you</p>
         <div className="pricing-toggle">
           <span className={!isYearly ? 'active' : ''}>Monthly</span>
           <label className="switch">
-            <input 
-              type="checkbox" 
-              checked={isYearly}
-              onChange={() => setIsYearly(!isYearly)}
-            />
-            <span className="slider"></span>
+            <input type="checkbox" checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
+            <span className="slider round"></span>
           </label>
-          <span className={isYearly ? 'active' : ''}>Yearly</span>
-          <div className="savings">Save 50%</div>
+          <span className={isYearly ? 'active' : ''}>Yearly <span className="save-badge">Save 20%</span></span>
         </div>
+      </div>
+      <div className="pricing-container">
         <div className="pricing-cards">
           <div className="pricing-card">
-            <h3>Free</h3>
-            <div className="price">$0</div>
+            <h3>Basic</h3>
+            <div className="price">
+              {isYearly ? '$29.99/year' : '$2.99/month'}
+            </div>
             <ul>
-              <li>Single Car Management</li>
               <li>Basic Maintenance Tracking</li>
               <li>Service History</li>
               <li>Basic Reminders</li>
             </ul>
             <div className="store-buttons">
-              <a href="https://apps.apple.com/app/logicar" className="store-button">
-                <i className="fab fa-apple"></i> App Store
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.logicar" className="store-button">
-                <i className="fab fa-google-play"></i> Google Play
-              </a>
+              <button onClick={scrollToSignup} className="signup-button">
+                <i className="fas fa-bell"></i> Get Notified at Launch
+              </button>
             </div>
           </div>
           <div className="pricing-card featured">
@@ -54,17 +65,14 @@ const Pricing = () => {
               <li>Priority Support</li>
             </ul>
             <div className="store-buttons">
-              <a href="https://apps.apple.com/app/logicar" className="store-button">
-                <i className="fab fa-apple"></i> App Store
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.logicar" className="store-button">
-                <i className="fab fa-google-play"></i> Google Play
-              </a>
+              <button onClick={scrollToSignup} className="signup-button">
+                <i className="fas fa-bell"></i> Get Notified at Launch
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

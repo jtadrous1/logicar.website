@@ -1,4 +1,5 @@
 import React from 'react';
+import SignUp from '../components/SignUp';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -10,13 +11,9 @@ const Home = () => {
           <div className="hero-content">
             <h1>Your Personal Car Maintenance Tracker</h1>
             <p>Never miss a service again. Track maintenance, get AI-powered advice, and keep your car in perfect condition.</p>
-            <div className="store-buttons">
-              <a href="https://apps.apple.com/app/logicar" className="store-button">
-                <i className="fab fa-apple"></i> App Store
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.logicar" className="store-button">
-                <i className="fab fa-google-play"></i> Google Play
-              </a>
+            <div className="coming-soon">
+              <span className="coming-soon-badge">Coming Soon</span>
+              <p className="coming-soon-text">Our app is currently in development. Sign up to be notified when we launch!</p>
             </div>
           </div>
           <div className="hero-image">
@@ -33,6 +30,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Sign Up Section */}
+      <SignUp />
 
       {/* Problem Solution Section */}
       <section className="problem-solution">
@@ -181,15 +181,15 @@ const Home = () => {
       {/* CTA Section */}
       <section className="cta" id="download">
         <div className="container">
-          <h2>Start Taking Better Care of Your Car</h2>
-          <p>Download LogiCar today and never worry about car maintenance again</p>
+          <h2>Be Ready When We Launch</h2>
+          <p>Sign up now to be the first to know when LogiCar is available</p>
           <div className="cta-buttons">
-            <a href="https://apps.apple.com/app/logicar" className="cta-button primary">
-              <i className="fab fa-apple"></i> App Store
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.logicar" className="cta-button primary">
-              <i className="fab fa-google-play"></i> Google Play
-            </a>
+            <button 
+              onClick={() => document.getElementById('signup').scrollIntoView({ behavior: 'smooth' })} 
+              className="cta-button primary"
+            >
+              Sign Up for Updates
+            </button>
           </div>
         </div>
       </section>
