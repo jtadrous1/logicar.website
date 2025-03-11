@@ -24,8 +24,9 @@ const Home = () => {
               <div className="notch"></div>
               <div className="screen">
                 <img 
-                  src={process.env.PUBLIC_URL + "/images/my-garage.png"}
-                  alt="LogiCar App Preview"
+                  src="/images/my-garage.png" 
+                  alt="LogiCar App Preview" 
+                  loading="lazy" 
                 />
               </div>
             </div>
