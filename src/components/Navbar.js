@@ -39,10 +39,10 @@ const Navbar = () => {
           <Link to="/features">Features</Link>
           <Link to="/pricing">Pricing</Link>
           <button 
-            onClick={() => scrollToSection('download')} 
-            className="download-button"
+            onClick={() => scrollToSection('signup')} 
+            className="signup-nav-button"
           >
-            Download
+            Sign Up
           </button>
         </div>
       </div>
