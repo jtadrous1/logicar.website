@@ -95,7 +95,15 @@
 }
 
 .signup-message.error {
-  color: #f44336;
+  background-color: rgba(255, 87, 87, 0.1);
+  border-color: rgba(255, 87, 87, 0.5);
+  color: #ff5757;
+}
+
+.signup-message.info {
+  background-color: rgba(86, 160, 255, 0.1);
+  border-color: rgba(86, 160, 255, 0.5);
+  color: #56a0ff;
 }
 
 @media (max-width: 768px) {

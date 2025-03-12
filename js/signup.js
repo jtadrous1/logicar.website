@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const signupForm = document.getElementById('signupForm');
   const emailInput = document.getElementById('emailInput');
-  const nameInput = document.getElementById('nameInput');
   const signupMessage = document.getElementById('signupMessage');
 
   if (signupForm) {
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         showMessage('Thank you! We\'ll notify you when LogiCar launches.', 'success');
         emailInput.value = '';
-        nameInput.value = '';
         
         // Reset message after 5 seconds
         setTimeout(() => {

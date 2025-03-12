@@ -1,11 +1,10 @@
+import { addDoc, collection, getDocs, query, Timestamp, where } from 'firebase/firestore';
 import React, { useState } from 'react';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import '../styles/SignUp.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
   const [message, setMessage] = useState({ text: '', type: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,10 +20,38 @@ const SignUp = () => {
     try {
       setIsSubmitting(true);
       
+      // Normalize email (lowercase to ensure case-insensitive uniqueness)
+      const normalizedEmail = email.toLowerCase().trim();
+      
+      // Check if the email already exists in the database
+      const signupsRef = collection(db, "signups");
+      const q = query(signupsRef, where("normalizedEmail", "==", normalizedEmail));
+      const querySnapshot = await getDocs(q);
+      
+      if (!querySnapshot.empty) {
+        // Email already exists
+        setMessage({ 
+          text: 'You\'re already on our waitlist! We\'ll notify you when we launch.', 
+          type: 'info' 
+        });
+        
+        // Clear form
+        setEmail('');
+        
+        setIsSubmitting(false);
+        
+        // Reset message after 5 seconds
+        setTimeout(() => {
+          setMessage({ text: '', type: '' });
+        }, 5000);
+        
+        return;
+      }
+      
       // Store the email in Firebase Firestore
       await addDoc(collection(db, "signups"), {
-        name: name,
         email: email,
+        normalizedEmail: normalizedEmail, // Store normalized email for future queries
         timestamp: Timestamp.now()
       });
       
@@ -36,7 +63,6 @@ const SignUp = () => {
       
       // Clear form
       setEmail('');
-      setName('');
       
       // Reset message after 5 seconds
       setTimeout(() => {
@@ -63,13 +89,6 @@ const SignUp = () => {
         
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="signup-form-row">
-            <input
-              type="text"
-              className="signup-input"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
             <input
               type="email"
               className="signup-input"

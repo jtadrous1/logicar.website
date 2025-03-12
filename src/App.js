@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Admin from './pages/Admin';
 import Features from './pages/Features';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
-import Admin from './pages/Admin';
 import './styles/App.css';
 
 function App() {
