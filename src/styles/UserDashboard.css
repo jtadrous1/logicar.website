@@ -1,0 +1,296 @@
+.user-dashboard-page {
+  min-height: 100vh;
+  background: var(--dark-bg);
+  color: var(--white);
+}
+
+/* Header */
+.dashboard-header {
+  background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 40px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.logout-button {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: rgba(255, 87, 87, 0.2);
+  border-color: rgba(255, 87, 87, 0.5);
+}
+
+.logout-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Main Content */
+.dashboard-main {
+  padding: 40px 0;
+}
+
+.dashboard-main .container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+/* Cards */
+.profile-card,
+.features-card,
+.ambassador-cta-card,
+.actions-card {
+  background: var(--dark-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover,
+.features-card:hover,
+.ambassador-cta-card:hover,
+.actions-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(111, 146, 131, 0.1);
+}
+
+.profile-card h2,
+.features-card h2,
+.ambassador-cta-card h2,
+.actions-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+/* Profile Card */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-item label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.profile-item span {
+  font-size: 16px;
+  color: var(--white);
+}
+
+/* Features Card */
+.features-card p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary-color);
+}
+
+.feature-item i {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.feature-item p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Ambassador CTA Card */
+.ambassador-cta-card {
+  background: linear-gradient(135deg, var(--dark-card) 0%, rgba(111, 146, 131, 0.1) 100%);
+  border: 1px solid rgba(111, 146, 131, 0.3);
+}
+
+.cta-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.cta-benefits {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.benefit i {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.benefit span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ambassador-cta-button {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ambassador-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(111, 146, 131, 0.3);
+}
+
+/* Actions Card */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.action-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.action-button i {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 30px 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .welcome-section h1 {
+    font-size: 28px;
+  }
+  
+  .dashboard-main {
+    padding: 30px 0;
+  }
+  
+  .profile-card,
+  .features-card,
+  .ambassador-cta-card,
+  .actions-card {
+    padding: 20px;
+  }
+  
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-benefits {
+    justify-content: center;
+    gap: 20px;
+  }
+} 

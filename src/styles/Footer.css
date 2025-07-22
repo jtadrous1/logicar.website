@@ -129,6 +129,34 @@
   margin: 0 5px;
 }
 
+.footer-logo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.footer-logo .logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white);
+  margin-left: 3px;
+}
+
+.footer-logo .logi-text {
+  color: var(--white);
+}
+
+.footer-logo .car-text {
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;

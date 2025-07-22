@@ -1,0 +1,327 @@
+.ambassador-page {
+  min-height: 100vh;
+  color: var(--white);
+}
+
+/* Hero Section */
+.ambassador-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-card) 100%);
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ambassador-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ambassador-hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Benefits Section */
+.ambassador-benefits {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.ambassador-benefits h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--white);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: var(--dark-card);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(111, 146, 131, 0.2);
+  border-color: var(--primary-color);
+}
+
+.benefit-card i {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.benefit-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Application Form Section */
+.ambassador-application {
+  padding: 80px 0;
+  background: linear-gradient(165deg, var(--dark-card) 0%, var(--dark-bg) 100%);
+}
+
+.application-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.application-form-container h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.application-form-container > p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.logged-in-notice {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 8px;
+}
+
+.logged-in-notice p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logged-in-notice i {
+  color: #4CAF50;
+  font-size: 16px;
+}
+
+.logged-in-notice strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.login-notice {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: rgba(111, 146, 131, 0.1);
+  border: 1px solid rgba(111, 146, 131, 0.3);
+  border-radius: 8px;
+}
+
+.login-notice p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.login-notice a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-notice a:hover {
+  color: var(--secondary-color);
+}
+
+.ambassador-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(111, 146, 131, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ambassador-submit-button {
+  width: 100%;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.ambassador-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(111, 146, 131, 0.3);
+}
+
+.ambassador-submit-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.application-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.application-message.visible {
+  opacity: 1;
+}
+
+.application-message.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  color: #4CAF50;
+}
+
+.application-message.error {
+  background-color: rgba(255, 87, 87, 0.1);
+  border: 1px solid rgba(255, 87, 87, 0.5);
+  color: #ff5757;
+}
+
+.application-message.info {
+  background-color: rgba(86, 160, 255, 0.1);
+  border: 1px solid rgba(86, 160, 255, 0.5);
+  color: #56a0ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ambassador-hero {
+    padding: 100px 0 60px;
+  }
+  
+  .ambassador-hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .ambassador-hero-content p {
+    font-size: 18px;
+  }
+  
+  .ambassador-benefits {
+    padding: 60px 0;
+  }
+  
+  .ambassador-benefits h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-grid {
+    gap: 20px;
+  }
+  
+  .benefit-card {
+    padding: 25px;
+  }
+  
+  .ambassador-application {
+    padding: 60px 0;
+  }
+  
+  .application-form-container h2 {
+    font-size: 28px;
+  }
+  
+  .application-form-container > p {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ambassador-hero-content h1 {
+    font-size: 28px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 14px 16px;
+  }
+} 

@@ -1,0 +1,361 @@
+.ambassador-admin {
+  margin-top: 40px;
+  padding: 20px;
+  background: var(--dark-card);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admin-header h2 {
+  color: var(--white);
+  font-size: 24px;
+  margin: 0;
+}
+
+.summary-stats-inline {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 60px;
+}
+
+.stat-inline.pending {
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.stat-inline.approved {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.stat-inline.rejected {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.stat-inline .stat-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.stat-inline .stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.loading,
+.error-message {
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  background: rgba(255, 87, 87, 0.1);
+  border: 1px solid rgba(255, 87, 87, 0.5);
+  color: #ff5757;
+}
+
+.no-applications {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Card-based layout */
+.ambassadors-cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.ambassador-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.ambassador-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(111, 146, 131, 0.1);
+}
+
+.ambassador-card.pending {
+  border-left: 4px solid #FF9800;
+}
+
+.ambassador-card.approved {
+  border-left: 4px solid #4CAF50;
+}
+
+.ambassador-card.rejected {
+  border-left: 4px solid #F44336;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.applicant-info h3 {
+  font-size: 20px;
+  color: var(--white);
+  margin: 0 0 8px 0;
+}
+
+.applicant-info .email {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.applicant-info .instagram {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.applicant-info .instagram i {
+  color: #E4405F;
+}
+
+.applicant-info .instagram a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.applicant-info .instagram a:hover {
+  color: var(--secondary-color);
+}
+
+.card-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.application-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  text-align: right;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+/* Card Content */
+.quick-info {
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: var(--white);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Expand Button */
+.expand-button {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.expand-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+}
+
+/* Expanded Content */
+.expanded-content {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+.detailed-info {
+  display: grid;
+  gap: 20px;
+}
+
+.info-section {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-section label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.text-content {
+  color: var(--white);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.approve-btn,
+.reject-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.approve-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+.reject-btn {
+  background: #F44336;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #da190b;
+  transform: translateY(-1px);
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.status-note {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .summary-stats-inline {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-status {
+    align-items: flex-start;
+  }
+  
+  .application-date {
+    text-align: left;
+  }
+  
+  .card-actions {
+    justify-content: stretch;
+  }
+  
+  .approve-btn,
+  .reject-btn {
+    flex: 1;
+  }
+} 

@@ -84,7 +84,7 @@ const SignUp = () => {
       <div className="signup-container">
         <h2 className="signup-title">Be the First to Know When We Launch</h2>
         <p className="signup-description">
-          Sign up to get notified and receive exclusive early-access benefits.
+          Get notified and receive exclusive early-access benefits.
         </p>
         
         <form className="signup-form" onSubmit={handleSubmit}>

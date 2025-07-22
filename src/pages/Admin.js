@@ -1,5 +1,6 @@
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
+import AmbassadorAdmin from '../components/AmbassadorAdmin';
 import { db } from '../firebase';
 import '../styles/Admin.css';
 
@@ -75,7 +76,10 @@ const Admin = () => {
   return (
     <div className="admin-page">
       <div className="admin-container">
-        <h1>Sign-up Management</h1>
+        <h1>Admin Dashboard</h1>
+        <p>Manage signups and ambassador applications.</p>
+        
+        <h2>Sign-up Management</h2>
         <p>View all users who have signed up for launch notifications.</p>
         
         {loading ? (
@@ -140,6 +144,9 @@ const Admin = () => {
             </div>
           </>
         )}
+        
+        {/* Ambassador Management Section */}
+        <AmbassadorAdmin />
       </div>
     </div>
   );

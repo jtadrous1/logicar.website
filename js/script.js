@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (pricingToggle.checked) {
         monthlyToggle.classList.remove('active');
         yearlyToggle.classList.add('active');
-        premiumPrice.textContent = '$49.99/year';
+        premiumPrice.textContent = '$59.99/year';
       } else {
         monthlyToggle.classList.add('active');
         yearlyToggle.classList.remove('active');
-        premiumPrice.textContent = '$4.99/month';
+        premiumPrice.textContent = '$9.99/month';
       }
     }
   };

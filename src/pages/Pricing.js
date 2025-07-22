@@ -30,31 +30,32 @@ const Pricing = () => {
             <input type="checkbox" checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
             <span className="slider round"></span>
           </label>
-          <span className={isYearly ? 'active' : ''}>Yearly <span className="save-badge">Save 20%</span></span>
+          <span className={isYearly ? 'active' : ''}>Yearly <span className="save-badge">Save 50%</span></span>
         </div>
       </div>
       <div className="pricing-container">
         <div className="pricing-cards">
           <div className="pricing-card">
-            <h3>Basic</h3>
+            <h3>Free</h3>
             <div className="price">
-              {isYearly ? '$29.99/year' : '$2.99/month'}
+              $0/month
             </div>
             <ul>
               <li>Basic Maintenance Tracking</li>
               <li>Service History</li>
               <li>Basic Reminders</li>
+              <li>Single Car Management</li>
             </ul>
             <div className="store-buttons">
               <button onClick={scrollToSignup} className="signup-button">
-                <i className="fas fa-bell"></i> Get Notified at Launch
+                <i className="fas fa-bell"></i> Notify Me
               </button>
             </div>
           </div>
           <div className="pricing-card featured">
             <h3>Premium</h3>
             <div className="price">
-              {isYearly ? '$49.99/year' : '$4.99/month'}
+              {isYearly ? '$59.99/year' : '$9.99/month'}
             </div>
             <ul>
               <li>Multiple Cars Management</li>
@@ -66,7 +67,7 @@ const Pricing = () => {
             </ul>
             <div className="store-buttons">
               <button onClick={scrollToSignup} className="signup-button">
-                <i className="fas fa-bell"></i> Get Notified at Launch
+                <i className="fas fa-bell"></i> Notify Me
               </button>
             </div>
           </div>
